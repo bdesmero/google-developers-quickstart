@@ -9,8 +9,9 @@ from google.cloud import texttospeech
 # Instantiates a client
 translate_client = translate.Client()
 
-# The text to translate
-text = u'Thank you'
+with open('sample.txt', 'r') as myfile:
+  text = myfile.read()
+
 # The target language
 target = 'ja'
 
